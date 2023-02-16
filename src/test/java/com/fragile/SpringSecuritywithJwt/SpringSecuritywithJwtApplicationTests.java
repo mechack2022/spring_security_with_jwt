@@ -1,0 +1,13 @@
+package com.fragile.SpringSecuritywithJwt;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringSecuritywithJwtApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
