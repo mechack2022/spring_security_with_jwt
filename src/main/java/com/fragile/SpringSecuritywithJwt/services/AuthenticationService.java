@@ -72,12 +72,7 @@ import org.springframework.stereotype.Service;
         }
 
         public AuthenticationResponse authenticate(AuthenticationRequest request) {
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(
-                            request.getEmail(),
-                            request.getPassword()
-                    )
-            );
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
             var user = repository.findByEmail(request.getEmail())
                     .orElseThrow();
             var jwtToken = jwtService.generateToken(user);
